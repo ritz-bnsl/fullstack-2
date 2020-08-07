@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-7</title>
+    <style>
+        .container {
+       /* border: solid gray;*/
+       padding: 15px;
+      
+       /* width:1500px;*/
+   margin-left: 15px;
+   margin-right: 15px;
+      }
+      #header {
+        background-color: lightgrey;
+        height: 100px;
+        margin-bottom: 15px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: white;
+      }
+     
+      #banner {
+        width: 100%;
+        height: 100vh;
+        background-color:aqua;
+        margin-bottom: 15px;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: white;
+      }
+     
+      #footer {
+        background-color: plum;
+        height: 100px;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: white;
+        clear: both;
+      }
+      #dot{
+          float: left;
+          width: 250px;
+      height: 250px;
+     margin: 20px 20px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 250px;
+      background:burlywood;
+      margin-left:100px;
+      
+      }
+      #content {
+          /* border: solid red; */
+          margin-bottom: 15px;
+          clear: both;
+        }
+        #content:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+        #left-side {
+         
+            width: 48%;
+          height: 100vh;
+          /* border: solid green; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 40px;
+          color: white;
+          background-color: gray;
+          /* border: solid blue; */
+          float: left;
+        }
+        #right-side {
+          width: 50%;
+
+          /* border: solid green; */
+          float: right;}
+          #a1{
+          background-color: goldenrod;
+          height:268px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 40px;
+          color: white;
+         margin-bottom:15px ;
+        }
+        #a2{
+          background-color: goldenrod;
+          height:268px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 40px;
+          color: white;
+          margin-bottom: 15px;
+          
+        }
+        #a3{
+          background-color: goldenrod;
+          height:268px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 40px;
+          color: white;
+        }
+        #col{
+            width: 18%;
+            float: left;
+            margin: 20px 20px;
+            background-color:red;
+            padding: 15px;
+           height:400px;
+            
+            margin-left: 60px;
+            
+        }
+       
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header">Header</div>
+        <div id="banner">Banner </div>
+        <h1><center>Section-1</center></h1>
+        <div id="dot"></div>
+        <div id="dot"></div>
+        <div id="dot"></div>
+        <div id="dot"></div>
+        
+        <div id="content">
+          <h1><center>Section-2</center></h1>
+            <div id="right-side">
+
+               
+              <div id="a1">Artical-1</div>
+              <div id="a2">Artical-2</div>
+              <div id="a3">Artical-3</div>
+            </div>
+            <div id="left-side">Main Content</div>
+          </div>
+          <h1><center>Section-3</center></h1>
+          <div id="col"></div>
+          <div id="col"></div>
+          <div id="col"></div>
+          <div id="col"></div>
+          <h1><center>Section-4</center></h1>
+        <div id="footer">Footer</div>
+      </div>
+</body>
+</html>
