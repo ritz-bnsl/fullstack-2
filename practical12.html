@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practical-12</title>
+    <title>Practical12</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <style>
         * {
@@ -15,121 +14,108 @@
         }
         
         body {
-            background-color: #4f8a8b;
-            color: black;
             min-width: 100%;
-            height: 100%;
+            background-color: lightgrey;
         }
         
-        .custom-table {
-            width: 60%;
-            padding: 5px 5px;
+        .wrapper {
+            width: 580px;
             background-color: white;
-            margin: 50px auto;
+            padding: 10px;
+            margin: 20px auto;
         }
         
-        table {
-            background-color: whitesmoke;
+        .custom {
             width: 100%;
-            text-align: center;
-            padding: 100px;
+            margin: 0 auto;
             border-collapse: collapse;
         }
         
-        td,
-        th {
-            width: 25%;
-            padding: 10px;
+        .basic {
+            background-color: lightgreen;
+        }
+        
+        .plus {
+            background-color: lightskyblue;
+        }
+        
+        .deluxe {
+            background-color: #63967a;
+        }
+        
+        .pro {
+            background-color: #618db1;
+        }
+        
+        .custom td,
+        .custom th {
+            width: 140px;
+            padding: 8px 5px;
+            text-align: center;
             border-right: 2px solid white;
             border-left: 2px solid white;
         }
         
-        tbody td:hover {
-            font-weight: bold;
-        }
-        
-        th {
+        .custom th {
             height: 70px;
-            color: midnightblue;
-            font-size: 30px;
+            color: #0c062e;
+            font-size: 25px;
         }
         
-        th i {
-            font-size: 30px;
-            color: midnightblue;
+        i {
+            font-size: 25px;
             margin-right: 10px;
         }
         
-        .starter {
-            background-color: #c1dcb7;
+        tbody tr:nth-child(odd),
+        tfoot tr:nth-child(even) {
+            background-color: #f3e6cb;
         }
         
-        .basic {
-            background-color: #bad6c8;
-        }
-        
-        .pro {
-            background-color: #bbd3dc;
-        }
-        
-        .ultimate {
-            background-color: #d5e4bc;
-        }
-        
-        caption {
-            color: black;
-            font-size: 25px;
-            background-color: white;
-            width:100%;
-        }
-        thead{
-            background-color: #a0c1b8;
-        }
-        tbody tr:nth-child(even)
-         {
-            background-color: #a0c1b8;
-        }
-        tbody tr:first-child{
-            font-size: 20px;
-            color: green;
-        }
-        tfoot{
-            background-color: #d3f1e2;
-        }
         tfoot tr {
             line-height: 60px;
+            background-color: cadetblue;
         }
         
-        tfoot a {
+        a {
             text-decoration: none;
-            padding: 15px 40px;
-            border-radius: 8px;
-            background-color:midnightblue;
-            font-size: 20px;
-            font-weight: 700;
+            background-color: #103530;
+            padding: 10px 15px;
             color: white;
-            transition: .4s;
+            border-radius: 10px;
+            font-size: 18px;
+            vertical-align: middle;
         }
         
-        tfoot a:hover {
-            background-color: black;
-            color: #9cada4;
-            font-weight: bolder;
+        a:hover {
+            background-color: rgb(163, 64, 24);
+            color: black;
+            transition: 0.4s;
+        }
+        
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        tbody tr:first-child td {
+            font-size: 20px;
+            color: rgb(56, 13, 38);
         }
     </style>
 </head>
 
 <body>
-
-    <div class="custom-table">
-        <table>
-            <caption>
-                <h2>Select Your Plan</h2>
-            </caption>
-            <colgroup class="starter"></colgroup>
+    <div class="wrapper">
+        <h2>
+            Select Your Plan
+        </h2>
+        <table class="custom">
             <colgroup class="basic"></colgroup>
+            <colgroup class="plus"></colgroup>
+            <colgroup class="deluxe"></colgroup>
             <colgroup class="pro"></colgroup>
-            <colgroup class="ultimate"></colgroup>
             <thead>
                 <tr>
                     <th>
@@ -177,7 +163,6 @@
                     <td>1 GB</td>
                     <td>Unlimited</td>
                 </tr>
-
                 <tr>
                     <td>Included</td>
                     <td>Included</td>
@@ -185,41 +170,45 @@
                     <td>Included</td>
                 </tr>
                 <tr>
-                    <td><img src="img/icon-check.png" alt="check"></td>
-                    <td><img src="img/icon-check.png" alt="check"></td>
-                    <td><img src="img/icon-check.png" alt="check"></td>
-                    <td><img src="img/icon-check.png" alt="check"></td>
-                </tr>                                                       
-                <tr>
-                    <td><img src="img/icon-x.png" alt="check"></td>
-                    <td><img src="img/icon-check.png" alt="check"></td>
-                    <td><img src="img/icon-check.png" alt="check"></td>
-                    <td><img src="img/icon-check.png" alt="check"></td>
+                    <td><img src="img/icon-check.png"></td>
+                    <td><img src="img/icon-check.png"></td>
+                    <td><img src="img/icon-check.png"></td>
+                    <td><img src="img/icon-check.png"></td>
                 </tr>
                 <tr>
-                    <td><img src="img/icon-x.png" alt="check"></td>
-                    <td><img src="img/icon-x.png" alt="check"></td>
-                    <td><img src="img/icon-check.png" alt="check"></td>
-                    <td><img src="img/icon-check.png" alt="check"></td>
+                    <td><img src="img/icon-x.png"></td>
+                    <td><img src="img/icon-check.png"></td>
+                    <td><img src="img/icon-check.png"></td>
+                    <td><img src="img/icon-check.png"></td>
                 </tr>
                 <tr>
-                    <td><img src="img/icon-x.png" alt="check"></td>
-                    <td><img src="img/icon-x.png" alt="check"></td>
-                    <td><img src="img/icon-x.png" alt="check"></td>
-                    <td><img src="img/icon-check.png" alt="check"></td>
+                    <td><img src="img/icon-x.png"></td>
+                    <td><img src="img/icon-check.png"></td>
+                    <td><img src="img/icon-check.png"></td>
+                    <td><img src="img/icon-check.png"></td>
                 </tr>
-
+                <tr>
+                    <td><img src="img/icon-x.png"></td>
+                    <td><img src="img/icon-x.png"></td>
+                    <td><img src="img/icon-check.png"></td>
+                    <td><img src="img/icon-check.png"></td>
+                </tr>
+                <tr>
+                    <td><img src="img/icon-x.png"></td>
+                    <td><img src="img/icon-x.png"></td>
+                    <td><img src="img/icon-x.png"></td>
+                    <td><img src="img/icon-check.png"></td>
+                </tr>
             </tbody>
             <tfoot>
-                <tr class="links">
-                    <td><a href="#">Sign Up</a> </td>
+                <tr>
+                    <td><a href="#">Sign Up</a></td>
                     <td><a href="#">Sign Up</a></td>
                     <td><a href="#">Sign Up</a></td>
                     <td><a href="#">Sign Up</a></td>
                 </tr>
             </tfoot>
         </table>
-
     </div>
 </body>
 
