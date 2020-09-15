@@ -3,250 +3,515 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
-    crossorigin="anonymous">
     <title>Practical-13</title>
+    <link rel="stylesheet" href="practical-13.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <style>
-        *{
-            
-            
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .heading{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            font-size: 40px;
-            color: grey;
-            margin-top: 30px;
-        }
-        
-        footer {
-            width: 100%;
-            
-            background-color: #26272b;
-        }
-        footer h2{
-            color: lightgrey;
-        }
-        
-        .sec-1{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            margin: 10px;
+      *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media (min-width: 851px)
+{
+    .main-content{
+        height:200px;
+        width:100%;
+        color:lightslategray;
+        text-align: center;
+        font-size: 40px;
+        line-height: 200px;
+    }
+    footer{
+        background-color:#1d1f20;
+        width:100%;
+    }
+    .sec-1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:10px;
+        margin: 15px auto;
+    }
+    .about{
+        width:40%
+    }
+    .sec-1 h2{
+        color:lightgray;
+        font-size:25px;
+    }
+    .about p{
+        text-align:justify-content;
+        color:gray;
+        line-height:22px;
+        margin-top: 10px;
+    }
+    a{
+        text-decoration: none;
+        color:grey;
+    }
+    a:hover{
+        color:orange;
+        font-weight: bolder;
+    }
+    .sec-1 ul{
+        list-style: none;
+        color:grey;
+    }
+    .sec-1 ul li{
+        padding:4px;
+    }
+    i{
+        padding:3px;
+        margin-right:4px;
+        size:20px;
+    }
+    .link1,.link2,.link3{
+        margin-left:10px;
+    } 
+    .link2{
+        min-width: 165px;
+    }
+    .sec-2{
+        display: flex;
+        justify-content: center;
+        font-size:24px;
+        margin:15px auto;
+    }
+    .sec-2 p{
+        color: lightgray;
+        padding: 10px;
+    }
+    .sec-2 a{
+        color:white;
+        background-color: red;
+        margin-left:20px;
+        padding:5px;
+        border-radius: 20px;
+        padding:10px;
+    }
+    .sec-2 a:hover{
+        background-color: orangered;
+    }
+    .sec-3{
+        display: flex;
+        justify-content: center;
+    }
+    .sec-3 ul{
+        list-style: none;
+        margin: 20px;
+    }
+    .sec-3 ul li{
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        padding:18px;
+        background-color: darkgray;
+        border-radius: 50%;
+        margin: 0px 15px;
+    }
+    .sec-3 ul li i{
+        color:white;
+        font-size: 24px;
+        text-align:center;
+        line-height:20px;  
+    }
+    .sec-3 ul li:nth-child(1):hover{
+        background-color: #3b5999;
+    }
+    .sec-3 ul li:nth-child(2):hover{
+        background-color: #55acee ;
+    }
+    .sec-3 ul li:nth-child(3):hover{
+        background-color: #dd4b39 ;
+    }
+    .sec-3 ul li:nth-child(4):hover{
+        background-color: #0077b5;
+    }
+    .sec-3 ul li:nth-child(5):hover{
+        background-color: #ea4c89;
+    }
 
-        
-        }
-        .about{
-            width: 40%;
-            color: gray;
-        }
-        
-        .categories li{
-            list-style: none;
-            margin-bottom: 5px;
-            font-size: 16px;
-            
-        }
-        .categories li a{
-            text-decoration: none;
-            color: gray;
-        }
-        .categories li a:hover{
-            font: bold;
-            font-size: 18px;
-        }
-        .quickList li{
-            list-style: none;
-            font-size: 16px;
-            margin-bottom: 5px;
+    .sec-4{
+        display:flex;
+        justify-content: center;
+        background-color: black;
+        color:darkgray;
+        height: 60px;
+        line-height: 40px;
+    }
+    .sec-4 p::after{
+        position: absolute;
+        content:'';
+        width:0px;
+        height:2px;
+        display:block;
+        right:35.9vw;
+        bottom:-28px;
+        background-color: orangered;
+        transition: 0.3s;
+        align-self: center;
+    }
+    .sec-4 p:hover::after{
+        width:27vw;
+        background-color: #55acee;
+    }
+    hr{
+        opacity:0.2;
+    }
+}
+@media (min-width: 581px) and (max-width: 850px){
+    .main-content{
+        height:200px;
+        width:100%;
+        color:lightslategray;
+        text-align: center;
+        font-size: 40px;
+        line-height: 200px;
+    }
+    footer{
+        background-color:#1d1f20;
+        width:100%;
+    }
+    .sec-1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding:10px;
+        margin: 15px auto;
+    }
+    .about{
+        width:100%;
+        margin: 0px 0px 20px 0px;
+    }
+    .sec-1 h2{
+        color:lightgray;
+        font-size:25px;
+    }
+    .about p{
+        text-align:justify-content;
+        color:gray;
+        line-height:22px;
+        margin-top: 10px;
+    }
+    a{
+        text-decoration: none;
+        color:grey;
+    }
+    a:hover{
+        color:orange;
+        font-weight: bolder;
+    }
+    .sec-1 ul{
+        list-style: none;
+        color:grey;
+    }
+    .sec-1 ul li{
+        padding:4px;
+    }
+    i{
+        padding:3px;
+        margin-right:4px;
+        size:20px;
+    }
+    .sec-2{
+        display: flex;
+        justify-content: center;
+        font-size:24px;
+        margin:15px auto;
+    }
+    .sec-2 p{
+        color: lightgray;
+        padding: 10px;
+    }
+    .sec-2 a{
+        color:white;
+        background-color: red;
+        margin-left:20px;
+        padding:5px;
+        border-radius: 20px;
+        padding:10px;
+    }
+    .sec-2 a:hover{
+        background-color: orangered;
+    }
+    .sec-3{
+        display: flex;
+        justify-content: center;
+    }
+    .sec-3 ul{
+        list-style: none;
+        margin: 20px;
+    }
+    .sec-3 ul li{
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        padding:18px;
+        background-color: darkgray;
+        border-radius: 50%;
+        margin: 0px 15px;
+    }
+    .sec-3 ul li i{
+        color:white;
+        font-size: 24px;
+        text-align:center;
+        line-height:20px;  
+    }
+    .sec-3 ul li:nth-child(1):hover{
+        background-color: #3b5999;
+    }
+    .sec-3 ul li:nth-child(2):hover{
+        background-color: #55acee ;
+    }
+    .sec-3 ul li:nth-child(3):hover{
+        background-color: #dd4b39 ;
+    }
+    .sec-3 ul li:nth-child(4):hover{
+        background-color: #0077b5;
+    }
+    .sec-3 ul li:nth-child(5):hover{
+        background-color: #ea4c89;
+    }
 
-        }
+    .sec-4{
+        display:flex;
+        justify-content: center;
+        background-color: black;
+        color:darkgray;
+        height: 60px;
+        line-height: 40px;
+    }
+    .sec-4 p::after{
+        position: absolute;
+        content:'';
+        width:0px;
+        height:2px;
+        display:block;
+        right:35.9vw;
+        bottom:-28px;
+        background-color: orangered;
+        transition: 0.3s;
+        align-self: center;
+    }
+    .sec-4 p:hover::after{
+        width:27vw;
+        background-color: #55acee;
+    }
+    hr{
+        opacity:0.2;
+    }
+}
+@media (max-width: 580px){
+    .main-content{
+        height:200px;
+        width:100%;
+        color:lightslategray;
+        text-align: center;
+        font-size: 40px;
+        line-height: 200px;
+    }
+    footer{
+        background-color:#1d1f20;
+        width:100%;
+    }
+    .sec-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding:10px;
+        margin: 15px auto;
+    }
+    .about{
+        width:100%;
+        margin-bottom: 20px;
+    }
+    .sec-1 h2{
+        color:lightgray;
+        font-size:25px;
+    }
+    .about p{
+        text-align:justify-content;
+        color:gray;
+        line-height:22px;
+        margin-top: 10px;
+    }
+    a{
+        text-decoration: none;
+        color:grey;
+    }
+    a:hover{
+        color:orange;
+        font-weight: bolder;
+    }
+    .sec-1 ul{
+        list-style: none;
+        color:grey;
+    }
+    .sec-1 ul li{
+        padding:4px;
+    }
+    i{
+        padding:3px;
+        margin-right:4px;
+        size:20px;
+    }
+    .link1,.link2,.link3{
+        margin-bottom:20px;
+    } 
+    .sec-2{
+        display: flex;
+        justify-content: center;
+        font-size:24px;
+        margin:15px auto;
+    }
+    .sec-2 p{
+        color: lightgray;
+        padding: 10px;
+    }
+    .sec-2 a{
+        color:white;
+        background-color: red;
+        margin-left:20px;
+        padding:5px;
+        border-radius: 20px;
+        padding:10px;
+    }
+    .sec-2 a:hover{
+        background-color: orangered;
+    }
+    .sec-3{
+        display: flex;
+        justify-content: center;
+    }
+    .sec-3 ul{
+        list-style: none;
+        margin: 20px;
+    }
+    .sec-3 ul li{
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        padding:18px;
+        background-color: darkgray;
+        border-radius: 50%;
+        margin: 0px 15px;
+    }
+    .sec-3 ul li i{
+        color:white;
+        font-size: 24px;
+        text-align:center;
+        line-height:20px;  
+    }
+    .sec-3 ul li:nth-child(1):hover{
+        background-color: #3b5999;
+    }
+    .sec-3 ul li:nth-child(2):hover{
+        background-color: #55acee ;
+    }
+    .sec-3 ul li:nth-child(3):hover{
+        background-color: #dd4b39 ;
+    }
+    .sec-3 ul li:nth-child(4):hover{
+        background-color: #0077b5;
+    }
+    .sec-3 ul li:nth-child(5):hover{
+        background-color: #ea4c89;
+    }
 
-        .quickList li a{
-            text-decoration: none;
-            color: gray;
-        }
-        
-        .quickList li a:hover{
-            font: bold;
-            font-size: 18px;
-        }
-        .contactUs li{
-            list-style: none;
-            font-size: 16px;
-        }
-        .contactUs li a {
-            text-decoration: none;
-            color: gray;
-        }
-        .contactUs li a :hover{
-            font: bold;
-            font-size: 18px;
-        }
-        span{
-            font-size: 16px;
-            color: gray;
-            margin-bottom: 5px;
-        }
-        i{
-            margin-right: 10px;
-            margin-bottom: 5px;
-            color: grey;
-        }
-        .sec-2{
-            width: 100%;
-            
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            align-items: center;
-        }
-        .sec-2 h2{
-            margin-right: 15px;
-        }
-        .sec-2 a{
-            background-color: red;
-            width: 80px;
-            height: 50px;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            border-radius: 30px;
-            text-decoration:none;
-        }
-        .sec-2 a:hover{
-            background-color: blue;
-            color: white;
-            font-size: 18px;
-        }
-        .sec-3{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .sec-3 ul{
-            list-style: none;
-            display: inline-block;
-        }
-        .sec-3 ul li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-        .sec-3 i{
-            background-color: lightgrey;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-        }
-        .sec-3 a{
-            text-decoration: none;
-        }
-        .sec-3 a:hover{
-            font: bold;
-            font-size: 20px;
-
-        }
-        .sec-4 {
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: gray;
-            height: 90px;
-        }
-        @media( max-width: 800px){
-            .sec-1{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            
-            margin: 10px;
-            }
-
-            .about{
-                width: 100%;
-                
-            }
-        }
+    .sec-4{
+        display:flex;
+        justify-content: center;
+        background-color: black;
+        color:darkgray;
+        height: 60px;
+        line-height: 40px;
+    }
+    .sec-4 p::after{
+        position: absolute;
+        content:'';
+        width:0px;
+        height:2px;
+        display:block;
+        right:35.9vw;
+        bottom:-28px;
+        background-color: orangered;
+        transition: 0.3s;
+        align-self: center;
+    }
+    .sec-4 p:hover::after{
+        width:27vw;
+        background-color: #55acee;
+    }
+    hr{
+        opacity:0.2;
+    }
+}
     </style>
 </head>
 <body>
-    <section class="heading">
-        <h1>Responsive Footer</h1>
-    </section>
+    <section class="main-content">Content Area</section>
     <footer>
         <section class="sec-1">
             <section class="about">
                 <h2>ABOUT</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores architecto repellat libero excepturi illo aperiam 
-                    accusamus at iusto dignissimos voluptas aspernatur saepe, quis neque, ex rem et perspiciatis necessitatibus adipisci?</p>
+                <p>Beatslabs is an initialtive to help the upcoming programmers with the code. Beta-Labs focusses on providing the most effcient code or snippets as we want the code to be simple . We will help programmers to build up concept in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, Javascript, PHP, Android, SQL and Algorithms.</p>
             </section>
-            <section class="categories">
-                <h2>CATEGORIES</h2>
+            <section class="link1">
+                <h2>CATEGORIES </h2>
                 <ul>
-                    <li ><a href="#">C</a></li>
-                    <li ><a href="#">UI design</a></li>
-                    <li ><a href="#">PHP</a></li>
-                    <li ><a href="#">Java</a></li>
-                    <li ><a href="#">Android</a></li>
-                    <li ><a href="#">Hybrid Apps</a></li>
-
+                    <li><a href="#">C</a></li>
+                    <li><a href="#">UI Design</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">Hybrid Apps</a></li>
                 </ul>
             </section>
-            <section class="quickList">
-                <h2>QUICKLIST</h2>
+            <section class="link2">
+                <h2>QUICK LINKS</h2>
                 <ul>
-                    <li ><a href="#">About us</a></li>
-                    <li ><a href="#">Contact us</a></li>
-                    <li ><a href="#">Contribute</a></li>
-                    <li ><a href="#">Privacy Policy</a></li>
-                    <li ><a href="#">SiteMap</a></li>
-                    <li ><a href="#">Disclaimer</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Disclaimer</a></li>
                 </ul>
             </section>
-            <section class="contactUs">
+            <section class="link3">
                 <h2>CONTACT US</h2>
                 <ul>
-                    <li><i class="fa fa-home"></i><span>SCO-75, chandigarh, india</span></li>
+                    <li><i class="fa fa-home"></i><span>SCO-75,Chandigarh,India</span></li>
                     <li><i class="fa fa-envelope"></i><span>betalabsindia@gmail.com</span></li>
-                    <li><i class="fa fa-mobile"></i><span>Mobile: 9729280731</span></li>
-                    <li><i class="fa fa-facebook-official"></i><a href="#">betalabsindia</a></li>
-                    
-
+                    <li><i class="fa fa-phone-square"></i><span>Mobile:9729280731</span></li>
+                    <li><i class="fa fa-facebook-official"></i><span><a href="#">betalabsindia</a></span></li>
                 </ul>
             </section>
         </section>
-            <hr>
-            <section class="sec-2">
-                <h2>Register for Free</h2>
-                <a href="#">Sign-Up</a>
-            </section>
-            <hr>
-            <section class="sec-3">
-                <ul>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                </ul>
-            </section>
-            <secction class="sec-4">
-                <p>Copyright © 2020 All rights reserved by
-                    <a href="#">Beta-labs</a>
-                </p>
-            </secction>
+        <hr width="100%" noshade/> 
+        <section class="sec-2">
+            <p>Register For Free <span><a href="#">SignUp!</a></span></p>
+            
+        </section>
+        <hr width="100%" noshade/>
+        <section class="sec-3">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            </ul>
+        </section>
+        <hr width="100%" noshade/>
+        <section class="sec-4">
+            <p>Copyright © 2020 All Rights Reserved by
+                <a href="https://www.beta-labs.in">Beta-Labs</a>
+            </p>
         </section>
     </footer>
-
 </body>
 </html>
