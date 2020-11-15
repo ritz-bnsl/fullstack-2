@@ -42,7 +42,7 @@ function setGreeting(){
         document.body.style.color="Navy";
     }
     else{
-        document.body.style.backgroundImage='url("img/night.jpg")';
+        document.body.style.backgroundImage='url("img/nightt.jpg")';
         greeting1.innerHTML='Good Evening';
         document.body.style.color="white";
     }
